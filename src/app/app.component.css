@@ -1,0 +1,18 @@
+.imc-card {
+    width: 34%;
+    margin-left: 15%;
+}
+
+.intro-card {
+    width: 70%;
+    margin-left: 15%;  
+}
+
+.action-style{
+    margin-left:40%;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+

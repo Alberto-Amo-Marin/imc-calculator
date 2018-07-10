@@ -1,0 +1,77 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1 >
+    Calculadora de Índice de Masa Corporal
+  </h1>
+  <!-- <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="> -->
+</div>
+
+<mat-card class="intro-card">
+  <mat-card-header>
+    <mat-card-title>¿Que es el IMC?</mat-card-title>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+   <!-- <img mat-card-image src="\assets\images\IMC.jpg">  -->
+  <br>
+   <mat-card-content>
+    <p>
+      El índice de masa corporal (IMC) es una razón matemática que asocia la masa y la talla de un individuo, ideada por el estadístico
+      belga Adolphe Quetelet; por lo que también se conoce como índice de Quetelet.
+    </p>
+
+    <p>
+      Hay que destacar que no se pueden aplicar los mismos valores de IMC en niños y adolescentes debido a su constante aumento
+      de estatura y desarrollo corporal, por lo que se obtiene un IMC respecto a su edad y sexo.
+    </p>
+
+    <p>
+      Por ello, primero se deberá contar con la fecha de nacimiento y de medición para obtener la edad calculada y así ser más
+      precisos al categorizar a éste grupo de edad.
+    </p>
+
+    <p>
+      Después se calculará el IMC con la misma fórmula que para el adulto, y después de calcularse el IMC para este grupo de edad,
+      el valor del IMC se comparará en tablas de crecimiento del CDC para el IMC por edad tanto para niños y niñas respectivamente
+      para obtener la categoría del percentil. Dichos percentiles son una medida de dispersión que se utiliza con más frecuencia
+      para evaluar el tamaño y los patrones de crecimiento de cada niño en los Estados Unidos, debido a que son menos susceptibles
+      a presentar valores extremos y por lo tanto errores en los rangos de valores. El percentil indica la posición relativa
+      del número del IMC del niño entre niños del mismo sexo y edad. Las tablas de crecimiento muestran las categorías del
+      nivel de peso que se usan con niños y adolescentes (bajo peso, peso saludable, sobrepeso y obeso).
+    </p>
+  </mat-card-content>
+
+</mat-card>
+
+<br>
+
+<mat-card class="imc-card">
+  <mat-card-header>
+    <mat-card-title>Cálculo del IMC:</mat-card-title>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+
+  <mat-card-content>
+    <br>
+    <form>
+      <mat-form-field>
+        <input matInput>
+        <mat-hint align="start">
+          <strong>Póngalo en CM</strong>
+        </mat-hint>
+      </mat-form-field>
+      <br>
+      <br>
+      <mat-form-field>
+        <input matInput>
+        <mat-hint align="start">
+          <strong>Póngalo en KG</strong>
+        </mat-hint>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <br>
+  <mat-card-actions class="action-style">
+    <button mat-raised-button color="primary">Calcular IMC</button>
+    <!-- <span class="spacer"></span> -->
+  </mat-card-actions>
+</mat-card>
