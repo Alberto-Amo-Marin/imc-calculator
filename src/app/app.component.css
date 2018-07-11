@@ -1,18 +1,59 @@
 .imc-card {
     width: 34%;
-    margin-left: 15%;
+    
 }
 
 .intro-card {
     width: 70%;
-    margin-left: 15%;  
+     
 }
 
-.action-style{
-    margin-left:41%;
+.mat-card{
+    margin-left:auto;
+    margin-right:auto;  
+    vertical-align:middle;
 }
 
 .spacer {
     flex: 1 1 auto;
 }
 
+.text-row{
+    font-size: 15px !important;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.example-ele {
+    padding: 0 14px;
+}
+
+.calc-button{
+    justify-content: center;
+}
+
+.imc-toolbar {
+    margin-top: 3%;
+}
+
+.mat-toolbar
+{
+    color: #fff !important;
+    background-color: #009688 !important;
+}
+
+:host {
+    display: block;
+    height: 100%;
+  }
+
+.hint-card {
+    width: 89%;
+}
+
+table {
+    width: 100%;
+    
+  }

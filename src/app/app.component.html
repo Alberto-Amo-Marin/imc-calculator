@@ -1,19 +1,14 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1 >
-    Calculadora de Índice de Masa Corporal
-  </h1>
-  <!-- <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="> -->
-</div>
+<app-header></app-header>
 
+<br>
 <mat-card class="intro-card">
   <mat-card-header>
-    <mat-card-title>¿Que es el IMC?</mat-card-title>
+    <mat-card-title style="font-size: 20px">¿Que es el IMC?</mat-card-title>
   </mat-card-header>
   <mat-divider></mat-divider>
-   <!-- <img mat-card-image src="\assets\images\IMC.jpg">  -->
+
   <br>
-   <mat-card-content>
+  <mat-card-content>
     <p>
       El índice de masa corporal (IMC) es una razón matemática que asocia la masa y la talla de un individuo, ideada por el estadístico
       belga Adolphe Quetelet; por lo que también se conoce como índice de Quetelet.
@@ -42,36 +37,110 @@
 
 </mat-card>
 
+
+<br>
+<mat-card class="imc-card">
+  <mat-card-header>
+    <mat-card-title style="font-size: 20px">Cálculo del IMC:</mat-card-title>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-toolbar class="imc-toolbar">
+
+
+    <mat-toolbar-row class="text-row">
+      <span>Escriba su ALTURA actual:</span>
+      <span class="example-spacer"></span>
+      <mat-form-field class="example-ele">
+        <input matInput>
+      </mat-form-field>
+      <span class="example-ele">CM.</span>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row class="text-row">
+      <span>Escriba su PESO actual:</span>
+      <span class="example-spacer"></span>
+      <mat-form-field class="example-ele">
+        <input matInput>
+      </mat-form-field>
+      <span class="example-ele">KG.</span>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row class="calc-button">
+      <button mat-raised-button color="primary">CALCULAR</button>
+    </mat-toolbar-row>
+
+  </mat-toolbar>
+
+  <mat-card class="hint-card">
+    <mat-card-header>
+      <mat-card-title style="font-size: 15px">RECUERDE:</mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <br>
+    <mat-card-content>
+      Es importante que recuerde introducir su altura en centimetros en lugar de en metros en la casilla de altura. De esta forma,
+      si mide 1.70 metros, deberá escribir 170 en el cuadro de altura.
+    </mat-card-content>
+  </mat-card>
+
+</mat-card>
 <br>
 
 <mat-card class="imc-card">
   <mat-card-header>
-    <mat-card-title>Cálculo del IMC:</mat-card-title>
+    <mat-card-title style="font-size: 20px">Resultado del IMC:</mat-card-title>
   </mat-card-header>
   <mat-divider></mat-divider>
+  <mat-toolbar class="imc-toolbar">
 
-  <mat-card-content>
-    <br>
-    <form>
-      <mat-form-field>
-        <input matInput>
-        <mat-hint align="start">
-          <strong>Póngalo en CM</strong>
-        </mat-hint>
+
+    <mat-toolbar-row class="text-row">
+      <span>Índice de Masa Corporal</span>
+      <span class="example-spacer"></span>
+      <mat-form-field class="example-ele">
+        <input matInput disabled>
       </mat-form-field>
-      <br>
-      <br>
-      <mat-form-field>
-        <input matInput>
-        <mat-hint align="start">
-          <strong>Póngalo en KG</strong>
-        </mat-hint>
+
+    </mat-toolbar-row>
+
+    <mat-toolbar-row class="text-row">
+      <span>Según su valor de IMC, tiene:</span>
+      <span class="example-spacer"></span>
+      <mat-form-field class="example-ele">
+        <input matInput disabled>
       </mat-form-field>
-    </form>
-  </mat-card-content>
+
+    </mat-toolbar-row>
+
+
+  </mat-toolbar>
   <br>
-  <mat-card-actions class="action-style">
-    <button mat-raised-button color="primary">Calcular IMC</button>
-    <!-- <span class="spacer"></span> -->
-  </mat-card-actions>
+  <span>Clasificación de la Organización mundial de la salud:</span>
+  <br>
+  <br>
+  <mat-card class="hint-card">
+    <mat-card-header>
+      <mat-card-title style="font-size: 15px">RESULTADOS:</mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <br>
+    <mat-card-content>
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>IMC</th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="clasif">
+            <th mat-header-cell *matHeaderCellDef>Clasificación</th>
+            <td mat-cell *matCellDef="let element"> {{element.clasif}} </td>
+          </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"><span class="example-spacer"></span></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"><span class="example-spacer"></span></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+
 </mat-card>
